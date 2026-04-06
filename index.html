@@ -6,7 +6,6 @@
   <title>İsimsiz Sarhoş</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: Arial, sans-serif;
       background: #f5f5f5;
@@ -16,7 +15,6 @@
       justify-content: center;
       padding: 2rem 1rem;
     }
-
     .kart {
       background: white;
       border-radius: 12px;
@@ -25,13 +23,11 @@
       width: 100%;
       overflow: hidden;
     }
-
     .hero {
       text-align: center;
       padding: 3rem 1rem 2rem;
       border-bottom: 1px solid #e0e0e0;
     }
-
     .avatar {
       width: 80px;
       height: 80px;
@@ -45,23 +41,12 @@
       color: #1e40af;
       margin: 0 auto 1.25rem;
     }
-
-    h1 {
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-
-    .tagline {
-      font-size: 15px;
-      color: #666;
-    }
-
+    h1 { font-size: 22px; font-weight: 500; margin-bottom: 6px; }
+    .tagline { font-size: 15px; color: #666; }
     .bolum {
       padding: 1.5rem 1.25rem;
       border-bottom: 1px solid #e0e0e0;
     }
-
     .bolum h2 {
       font-size: 12px;
       font-weight: 500;
@@ -70,19 +55,8 @@
       letter-spacing: 0.06em;
       margin-bottom: 0.75rem;
     }
-
-    .hakkinda {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #333;
-    }
-
-    .beceriler {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
+    .hakkinda { font-size: 15px; line-height: 1.7; color: #333; }
+    .beceriler { display: flex; flex-wrap: wrap; gap: 8px; }
     .etiket {
       font-size: 13px;
       padding: 4px 12px;
@@ -91,7 +65,6 @@
       border: 1px solid #ddd;
       color: #555;
     }
-
     .iletisim-satir {
       display: flex;
       align-items: center;
@@ -99,19 +72,8 @@
       font-size: 15px;
       margin-bottom: 8px;
     }
-
-    .etiket-kucuk {
-      font-size: 13px;
-      color: #999;
-      min-width: 60px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 1.25rem;
-      font-size: 13px;
-      color: #aaa;
-    }
+    .etiket-kucuk { font-size: 13px; color: #999; min-width: 60px; }
+    .footer { text-align: center; padding: 1.25rem; font-size: 13px; color: #aaa; }
   </style>
 </head>
 <body>
@@ -131,8 +93,8 @@
     <div class="bolum">
       <h2>Beceriler</h2>
       <div class="beceriler">
-        <span class="etiket">ıssız bir adam olmak
-        <span class="etiket">ıssızlık
+        <span class="etiket">ıssız bir adam olmak</span>
+        <span class="etiket">ıssızlık</span>
         <span class="etiket">ıssızlık</span>
         <span class="etiket">ıssızlık.</span>
       </div>
@@ -156,6 +118,23 @@
         <canvas id="oyun" width="400" height="400" style="border:1px solid #ddd; border-radius:8px; background:#111; max-width:100%;"></canvas>
         <div style="margin-top:10px; font-size:13px; color:#999;">Ok tuşlarıyla oyna. <span id="skor" style="color:#222; font-weight:500;">Skor: 0</span></div>
         <button onclick="baslat()" style="margin-top:10px; padding:6px 18px; border-radius:8px; border:1px solid #ddd; background:#f0f0f0; cursor:pointer; font-size:13px;">Yeniden Başla</button>
+      </div>
+    </div>
+
+    <div class="bolum">
+      <h2>Mesaj Gönder</h2>
+      <form action="/mesaj-gonder" method="POST" style="display:flex; flex-direction:column; gap:10px;">
+        <input type="text" name="isim" placeholder="Adın" required
+          style="padding:8px 12px; border-radius:8px; border:1px solid #ddd; font-size:14px;" />
+        <textarea name="mesaj" placeholder="Mesajın..." required rows="4"
+          style="padding:8px 12px; border-radius:8px; border:1px solid #ddd; font-size:14px; resize:vertical;"></textarea>
+        <button type="submit"
+          style="padding:8px 18px; border-radius:8px; border:1px solid #ddd; background:#dbeafe; color:#1e40af; font-size:14px; cursor:pointer;">
+          Gönder
+        </button>
+      </form>
+      <div style="margin-top:12px;">
+        <a href="/mesajlar" style="font-size:13px; color:#999;">Gelen mesajları gör →</a>
       </div>
     </div>
 
